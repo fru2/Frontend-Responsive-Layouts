@@ -1,0 +1,174 @@
+@use "../constants"as const;
+
+// FIXME: Use class or id selector instead of deep nested selectors. 
+
+main {
+  padding: 2rem;
+}
+
+// SECTION 1 ---------------------------
+
+#section1 {
+  & .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: const.$dull-white;
+  }
+
+
+  // search bar
+  &>div {
+    display: flex;
+    flex-direction: row;
+
+    article:first-child {
+      flex: 1;
+      margin-right: 1rem;
+    }
+
+    article img {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search>form {
+    flex: 1;
+  }
+
+  .search-box {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.0rem;
+    width: 100%;
+  }
+
+  .search-box:focus {
+    border: none;
+    outline-width: 0;
+  }
+
+
+  // Header content
+  &>article:nth-child(2) {
+    margin-top: 1rem;
+
+    img {
+      height: 220px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: .75rem;
+      margin-left: -0.75rem;
+    }
+
+    &>div {
+      padding: 0 3rem;
+    }
+
+    &>div>div {
+      margin-top: 1rem;
+
+      .btn-outline {
+        margin-left: 0.5rem;
+      }
+    }
+
+    h3 {
+      color: const.$white;
+      font-size: 1.5rem;
+    }
+
+  }
+
+
+  // List items
+  &>article:nth-child(3) {
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    // justify-content: baseline;
+
+
+    div {
+      // min-width: 110px;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div>img {
+      margin-right: 0.5rem;
+    }
+
+  }
+
+
+}
+
+
+
+
+// SECITON 2 ---------------------------
+
+
+#section2 {
+
+  &>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+
+    div {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    span {
+      margin-left: 1rem;
+      margin-top: 0.15rem;
+      color: const.$dull-white;
+    }
+
+    .btn-solid {
+      height: 3rem;
+      width: 3rem;
+      border: none;
+      border-radius: 50%;
+      background-color: const.$indigo;
+    }
+
+    .btn-solid+.btn-solid {
+      margin-left: 0.5rem;
+    }
+  }
+
+
+
+  // scrollable container for card elements
+
+  .scroll-x {
+    display: flex;
+    flex-direction: row;
+    // max-width: 500px;
+    margin-top: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+}
