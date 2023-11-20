@@ -1,0 +1,35 @@
+$border-radius: 16px;
+$padding-horizontal: 40px;
+$padding-vertical: 16px;
+$padding-std: $padding-vertical $padding-horizontal;
+$border-radius: 16px;
+$padding-horizontal: 32px;
+$padding-vertical: 16px;
+$padding-std: $padding-vertical $padding-horizontal;
+
+/* Page theme: Light */
+$text-primary: #111;
+$text-secondary: #1e1e1e;
+$text-inactive: #393939;
+
+$color-primary: #a1ccf7;
+$color-secondary: #f1c5e8;
+
+
+$border-light: #ffffff77;
+$border-dark: #00000077;
+
+
+$background-light: #f3f3f3;
+$text-light: #fff;
+
+$background-dark: #191a1b;
+$text-dark: #191a1b;
+
+
+$border: 1px $border-light solid;
+
+
+$theme: dark;
+
+// @if (theme)

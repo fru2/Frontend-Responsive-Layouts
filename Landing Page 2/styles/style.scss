@@ -1,0 +1,122 @@
+@use "layouts" as layouts;
+@import './constants';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+
+/* left section */
+
+
+
+/* @media screen and (max-width: 768px) {
+  
+  
+  } */
+
+
+
+.card {
+  background-color: #10101052;
+  /* background-color: #252525; */
+  color: white;
+  border-radius: $border-radius;
+  /* padding: 16px; */
+  padding: $padding-vertical * 2;
+}
+
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.button-solid {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  width: fit-content;
+  height: min-content;
+  padding: 8px var(--padding-vertical);
+}
+
+.button-text {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+
+.flex-fill {
+  flex-grow: 1;
+  flex: 1;
+}
+
+
+.icon-white{
+  filter: invert(100%) sepia(57%) saturate(80%) hue-rotate(258deg) brightness(114%) contrast(91%);
+}
+
+.icon-black{
+  filter: invert(8%) sepia(13%) saturate(204%) hue-rotate(169deg) brightness(93%) contrast(94%);
+}
+
+.icon-s{
+  height: 1rem;
+}
+
+.icon-l{
+  height: 1.4rem;
+}
+
+.flex-center{
+  display: flex;
+  // flex-direction: ;
+  gap: 4px; 
+  align-items: center;
+  justify-content: center;
+}
+
+.absolute-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.bold{
+  font-weight: 500;
+}
+
+
+.clip-circle{
+  border-radius: 999px;
+}
